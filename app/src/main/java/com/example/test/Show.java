@@ -8,9 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.test.DataBase.DataBaseAux;
+import com.example.test.Database.DatabaseAux;
 
 public class Show extends AppCompatActivity {
 
@@ -18,32 +17,33 @@ public class Show extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
+
+        showElements();
     }
+
     public void changeToMain(View view) {
         Intent nIntent = new Intent(Show.this, MainActivity.class);
         startActivity(nIntent);
     }
-    void ShowElements(){
-        SQLiteDatabase db = new DataBaseAux(this).getReadableDatabase();
 
-        Cursor cursor  = db.rawQuery("SELECT * FROM users", null);
+    void showElements() {
+        SQLiteDatabase db = new DatabaseAux(this).getReadableDatabase();
 
-        if(cursor.moveToFirst()){
-            TextView showNameView = findViewById(R.id.showNameView);
-            TextView showEmailView = findViewById(R.id.showEmailView);
-            do{
+        Cursor cursor = db.rawQuery("SELECT * FROM users", null);
+        TextView showNameView = findViewById(R.id.showName);
+        TextView showEmailView = findViewById(R.id.showEmail);
+
+        if(cursor.moveToFirst()) {
+            do {
                 int id = cursor.getInt(0);
                 String name = cursor.getString(1);
                 String email = cursor.getString(2);
 
                 showNameView.setText(id + " " + name);
                 showEmailView.setText(email);
-
             }while(cursor.moveToNext());
-            Toast.makeText(this, "1", Toast.LENGTH_SHORT).show();
         }
 
         db.close();
     }
-
 }

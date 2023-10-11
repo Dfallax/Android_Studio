@@ -1,4 +1,4 @@
-package com.example.test.DataBase;
+package com.example.test.Database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -6,24 +6,22 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class DataBaseAux extends SQLiteOpenHelper {
-private static final String DB_NAME = "Juego_Topo";
-private static final int DB_VERSION = 1;
+import androidx.annotation.Nullable;
 
-
-    public DataBaseAux(@Nullable Context context) {
+public class DatabaseAux extends SQLiteOpenHelper {
+    private static final String DB_NAME = "Fountain&Go";
+    private static final int DB_VERSION = 1;
+    public DatabaseAux(@Nullable Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
-
-
-
+    
+    
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table users "+
-                "(id integer primary key autoincrement," +
-                "name varchar(25) not null ," +
-                "email varchar(25) not null )"
-        );
+        db.execSQL("CREATE TABLE users " +
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "name VARCHAR(25) NOT NULL," +
+                "email VARCHAR(25) NOT NULL)");
     }
 
     @Override

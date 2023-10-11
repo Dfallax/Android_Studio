@@ -7,55 +7,46 @@
     tools:context=".InsertToDB">
 
     <Button
-        android:id="@+id/InsertButton"
+        android:id="@+id/insertButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="352dp"
+        android:layout_marginBottom="325dp"
         android:onClick="insertValues"
-        android:text="INSERTAR"
+        android:text="Insertar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/insertName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="76dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InsertButton" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/insertEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="22dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="EMAIL"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/InsertButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="365dp" />
+        app:layout_constraintStart_toStartOf="@+id/insertName"
+        app:layout_constraintTop_toBottomOf="@+id/insertName" />
 
     <Button
-        android:id="@+id/ToShow"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:onClick="changeToShow"
-        android:text="to Show"
-        app:layout_constraintBottom_toTopOf="@+id/InsertButton"
-        app:layout_constraintEnd_toEndOf="@+id/InsertButton" />
+        android:onClick="changeToMain"
+        android:text="volver"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="459dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
