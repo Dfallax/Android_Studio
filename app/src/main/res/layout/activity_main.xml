@@ -117,5 +117,14 @@
         tools:layout_editor_absoluteX="116dp"
         tools:layout_editor_absoluteY="122dp" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="changeToInsert"
+        android:text="Button"
+        tools:layout_editor_absoluteX="294dp"
+        tools:layout_editor_absoluteY="36dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
