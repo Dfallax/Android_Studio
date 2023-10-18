@@ -47,6 +47,6 @@
         android:layout_height="wrap_content"
         android:onClick="changeToMain"
         android:text="volver"
-        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteX="160dp"
         tools:layout_editor_absoluteY="459dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
         Intent nIntent = new Intent(MainActivity.this, InsertToDB.class);
         startActivity(nIntent);
     }
-
+    public void changeToDelete(View view) {
+        Intent nIntent = new Intent(MainActivity.this, DeleteToDB.class);
+        startActivity(nIntent);
+    }
     public void changeToShow(View view) {
         Intent nIntent = new Intent(MainActivity.this, Show.class);
         startActivity(nIntent);
